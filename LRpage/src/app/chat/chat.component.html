@@ -1,0 +1,16 @@
+<div class="container">
+
+Type your Message:<input type="text" name="msg" [(ngModel)]="chat.msg">
+<button (click)="onSend()" class="container">SEND</button>
+</div>
+
+	<!-- Chats list goes here -->
+	<div class="container" *ngFor="let chat of allChats">
+            <h3>
+                {{chat.Email}}
+            </h3>
+            <h4>
+                {{chat.msg_db}}
+            </h4>
+            <br>
+        </div>
