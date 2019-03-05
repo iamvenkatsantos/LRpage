@@ -1,0 +1,26 @@
+<div class="wrapper">
+    <div class="login">LogIn</div>
+    <div class="signup">Sign Up</div>
+    
+    <div class="login-form">
+      <input type="text" placeholder="Email or Username" class="input"[(ngModel)]="user.Email" id="login_username"><br />
+
+      <input type="password" placeholder="Password" class="input" [(ngModel)]="user.passWord" id="login_password"><br />
+
+      <div class="btn" id="btn_login"(click)=" onGetvalueLoginStaff()" >login</div><br>
+      <h3>OR</h3><br>
+      <div class="btn" id=btn_student (click)="onGetvalueLogin()" SS>Iam StudenT</div>
+    
+    
+   </div>
+
+     <div class="signup-form">
+         <input type="text" placeholder="Email or Username" class="input"[(ngModel)]="user1.Email" id="login_username"><br />
+
+         <input type="password" placeholder="Password" class="input" [(ngModel)]="user1.passWord" id="login_password"><br />
+      
+         <input type="password" placeholder="Password" class="input" [(ngModel)]="user1.confrimPassWord" id="login_password"><br />
+        <div class="btn" (click)="onGetvalueRegister()"id="btn_signup">Create account</div>
+     </div>
+    
+</div>

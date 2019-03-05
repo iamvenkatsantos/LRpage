@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<!-- <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<div class="w3-bar  w3-blue">
+  <a href="#" class="w3-bar-item w3-button  "><i class="fa fa-home"></i>Home</a>
+
+ <div class="w3-dropdown-hover w3-mobile">
+      <button 
+      class="w3-button"
+      (click)="showFunction()"
+      >Show all Application</button> 
+  </div>
+
+
+  <div class="w3-dropdown-hover w3-mobile">
+      <button
+       class="w3-button"
+       (click)="acceptFunction()" 
+       >Accepted Applications</button>
+      </div>
+   
+  <div class="w3-dropdown-hover w3-mobile">
+      <button class="w3-button"
+      (click)="declineFunction()"
+      >Declined Application</button>
+      </div>
+    
+</div>
+
+<br><br>
+
+<p class="alert alert-info" *ngIf=showVar>
+  In Show area
+  </p>
+
+  <p class="alert alert-info" *ngIf=acceptVar>
+
+    In accpet area
+    </p>
+
+    <p class="alert alert-info" *ngIf=declineVar>
+      In decline area
+    </p>
+
+
+    <!-- Chats list goes here -->
+    <div class="container" *ngFor="let chat of allChats">
+        <h1>
+          Frist Name: {{chat.fname}}
+        </h1> 
+        <h3>
+          Last Name: {{chat.lname}}
+        </h3> <br>
+        <h3>
+          Date Of Birth: {{chat.DOB}}
+        </h3> <br>
+        <h3>
+          GENDER: {{chat.male}}
+        </h3> <br>
+        <h2>PARENT DETAIL:
+              <h4>
+                      FATHER NAME:{{chat.Father_name}} <br>
+                      FATHER OCCUPATION:{{chat.Father_occup}} <br>
+                      MOTHER NAME:{{chat.Mother_name}} <br>
+                      MOTHER OCCUPATION:{{chat.Mother_oocup}}  <br>
+                    </h4>
+       </h2> <br>
+       <h2>GUARDIAN DETAIL:
+              <h4>
+                      GUARDIAN NAME:{{chat.Guardian_name}} <br>
+                      GUARDIAN OCCUPATION:{{chat.Guardian_Detail}}  <br>
+                    </h4>
+       </h2> <br>
+        
+      <h2> HSC Details:
+              <h4>
+                      Year of 12th Passing {{chat.pass_12}} <br>
+                      12th Percentage {{chat.per_12}} <br>
+                    </h4>
+      </h2> <br>
+        <h2>  SSLC Details:
+              <h4>
+                      Year of 10th Passing {{chat.pass_10}} <br>
+                      10th Percentage {{chat.per_10}} <br>
+                    </h4>
+        </h2> <br>
+        
+       <h2>
+              <h4>
+                      Year of Diploma Passing {{chat.pass_dip}} <br>
+                        Degeree in Diploma{{chat.deg_dep}} <br>
+                    </h4>
+       </h2> <br>
+        <h3>
+          Nationality{{chat.Nationality}}
+        </h3> <br>
+        <h3>
+         Community: {{chat.Community}}
+        </h3> <br>
+        <h3>
+              Mobile Number: {{chat.Mobile_Number}}
+        </h3> <br>
+        <h3>
+              Residential Address: {{chat.Res_addr}}
+        </h3> <br>
+        <h3>
+              Premanent Address {{chat.Premanent_addr}}
+        </h3> <br>
+        <p class="alert alert-info" *ngIf=showVar>
+       <button (click)="showID(chat.Email_db)">Approve</button><br>
+       <button (click)="decline(chat.Email_db)">Decline</button>
+      </p>
+        <br>
+    </div>
+</body>
+</html>

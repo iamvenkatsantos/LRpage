@@ -1,0 +1,189 @@
+
+ <style>
+ body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+  background-color:whitesmoke;
+  position: relative;
+  width: 60%;
+  left: 20%;
+  background: rgba(0,0,0,.1);
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 60%;
+  padding: 15px;
+  align-content: center;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+.font{
+  font-size: 0.5cm;
+  color:black;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  width: 10%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+</style>
+<div class="container" text-align="center" > 
+    <h1>ANJALAI AMMAL MAHALINGAM ENGINEERING COLLEGE</h1>
+  </div>
+  <div class="container1" text-align="">
+      <h3>-KOVILVENNI</h3>
+  </div>
+    <div class="container" text-align="center">
+      <h2>STUDENT REGISTRATION FORM</h2>
+    </div>
+    
+{{user.Fname}}{{user.Lname}}
+
+<form>
+<div class="container">
+  <input type="text" placeholder="Enter Frist Name" [(ngModel)]="user.Fname" name="Fname" required>
+</div>
+<div class="container">
+ 
+  <input type="text" placeholder="Enter Last Name" [(ngModel)]="user.Lname" name="Lname" required>
+</div>
+<div class="container">
+    <label for="Date Of Birth"><b>Date Of Birth:</b></label>&nbsp;&nbsp;&nbsp;
+    <input class="font containers"  type="date"
+    
+    
+    
+    
+    placeholder="Enter Date Of Birth" [(ngModel)]="user.DOB" name="Date Of Birth" required>
+  </div>
+  <div class="container">
+      <label for="Email"><b>Email:</b></label>&nbsp;&nbsp;&nbsp;
+      <input class="font containers"  type="email" placeholder="" [(ngModel)]="user.Email" name="Email" required>
+    </div>
+  <div class="container">
+      <label for="Gender"><b>GENDER:</b></label>&nbsp;&nbsp;&nbsp;
+      <input type="radio" name="Gender"  [(ngModel)]="user.male" value="male"  required> Male
+      <input type="radio" name="Gender" [(ngModel)]="user.male" value="female"> Female
+    </div>
+<div class="container">
+    <label for="parent's Detail"><b>PARENTS DETAIL</b></label><br>
+    <input type="text" placeholder="Enter Parent's Name" [(ngModel)]="user.Father_name" name="Father's Name" required>
+  </div>
+  <div class="container">
+      <input type="text" placeholder="Enter Parent's Occupation" [(ngModel)]="user.Father_occup" name="Father's Occupation" required>
+    </div>
+    <div class="container">
+      <label for="Guardian Detail"><b>GUARDIAN DETAIL</b></label><br>
+      <input type="text" placeholder="Enter Guardian Name" [(ngModel)]="user.Guardian_name" name="Guardian Name" required>
+  </div>
+  <div class="container">
+    <input type="text" placeholder="Enter Guardian Occupation" [(ngModel)]="user.Guardian_Detail" name="Guardian Detail" required>
+</div>
+          <div class="container">
+              <label for="parent's Detail"><b>HSC DETAIL</b></label><br>
+              <input type="text" placeholder="Year of 12th Passing"[(ngModel)]="user.pass_12" name="Year of 12th Passing" required>
+            </div>
+
+            <div class="container">
+              
+                <input type="text" placeholder="12th Percentage"[(ngModel)]="user.per_12" name="12th Percentage" required>
+              </div>
+              <div class="container">
+                  <label for="parent's Detail"><b>SSLC DETAIL</b></label><br>
+                  <input type="text" placeholder="Year of 10th Passing"[(ngModel)]="user.pass_10" name="Year of 10th Passing" required>
+                </div>
+                <div class="container">
+                  
+                    <input type="text" placeholder="10th Percentage"[(ngModel)]="user.per_10" name="10th Percentage" required>
+                  </div>
+                  <div class="container">
+                      <label for="parent's Detail"><b>DIPLOMA DETAIL</b></label><br>
+                      <input type="text" placeholder="Year of Diploma Passing"[(ngModel)]="user.pass_dip" name="Year of Diploma Passing" required>
+                    </div>
+                    <div class="container">
+                    
+                        <input type="text" placeholder="Degeree in Diploma"[(ngModel)]="user.deg_dep" name="Degeree in Diploma" required>
+                      </div>
+                      <div class="container">
+                          <label for="parent's Detail"><b>OTHER DETAIL</b></label><br>
+                        <input type="text" placeholder="Nationality"[(ngModel)]="user.Nationality" name="Nationality" required>
+                      </div>
+                      <div class="container">
+                       
+                        <input type="text" placeholder="Community"[(ngModel)]="user.Community" name="Community" required>
+                      </div>
+                      <div class="container">
+                        
+                        <input type="text" placeholder="Mobile Number"[(ngModel)]="user.Mobile_Number" name="Mobile Number" required>
+                      </div>
+                      <div class="container">
+                       
+                        <input type="text" placeholder="Residential Address"[(ngModel)]="user.Res_addr" name="Residential Address" required>
+                      </div>
+                      <div class="container">
+                        
+                        <input type="text" placeholder="Premanent Address"[(ngModel)]="user.Premanent_addr" name="Premanent Address" required>
+                      </div>
+                      <div class="container"> 
+                        <input type="file" placeholder="image"[(ngModel)]="user.image" name="image" required>
+                        
+                      </div>
+                      <div class="container" align="center">
+                        
+                        <button class="button" (click)=onGetvalue()>SUBMIT</button>
+                         </div>
+                    
+                        </form>
+        
+
+  
